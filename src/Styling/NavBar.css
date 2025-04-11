@@ -1,0 +1,110 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1a5d;
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    max-width: 1473px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 60px;
+}
+
+.content-links, .nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links {
+    margin: 0 10px;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .content-links, .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        z-index: 100;
+    }
+
+    .nav-container {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1b1a5d;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .nav-container.active {
+        display: flex;
+    }
+
+    .content-links, .nav-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        margin: 5px 0;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 15px;
+    }
+}
+
